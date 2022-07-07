@@ -8,12 +8,11 @@
 </head>
 <body>
 
-
 <div id="wrapper" class="add-fund">
 
   <form action="fund-log.php" method="post">
 
-    <h1 class="title">Add fund</h1>
+    <h1 class="title">ANDALUCIA</h1>
 
     <div class="row row-date">
       <div class="label">Date:</div>
@@ -22,7 +21,10 @@
 
     <div class="row row-type">
       <div class="label">Type:</div>
-      <input type="text" name="type">
+      <select name="type">
+        <option value="dr">Gastador</option>
+        <option value="cr">Ricarica</option>
+      </select>
     </div>
 
     <div class="row row-amount">
@@ -32,17 +34,28 @@
 
     <div class="row row-buyer">
       <div class="label">Buyer:</div>
-      <input type="text" name="name">
+      <select name="buyer">
+        <option value="jeboy">Jeboy</option>
+        <option value="tim">Tim</option>
+      </select>
     </div>
 
     <div class="row row-merchant">
       <div class="label">Merchant:</div>
-      <input type="text" name="merchant">
+      <select name="merchant">
+        <option value=1>Savemore Acacia Estates</option>
+        <option value=2>Bellyrub Acacia Estates</option>
+        <option value=3>Brewhilde Acacia Estates</option>
+      </select>
     </div>
 
     <div class="row row-mode">
       <div class="label">Mode:</div>
-      <input type="text" name="mode">
+      <select name="mode">
+        <option value=1>Gcash</option>
+        <option value=2>Cash</option>
+        <option value=3>Card</option>
+      </select>
     </div>
 
     <div class="row-submit">
