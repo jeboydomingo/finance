@@ -1,3 +1,5 @@
+<?php include 'connect.php'; ?>
+
 <html>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,44 +21,78 @@
       <input type="date" name="date">
     </div>
 
+    <?php
+    $sql = "SELECT id, type FROM `types`";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
     <div class="row row-type">
       <div class="label">Type:</div>
       <select name="type">
-        <option value="dr">Gastador</option>
-        <option value="cr">Ricarica</option>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['id']; ?>">
+            <?php echo $row['type']; ?>
+          </option>
+        <?php } ?>
       </select>
     </div>
+    <?php } ?>
 
     <div class="row row-amount">
       <div class="label">Amount:</div>
       <input type="text" name="amount">
     </div>
 
+    <?php
+    $sql = "SELECT id, buyer FROM `buyers`";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
     <div class="row row-buyer">
       <div class="label">Buyer:</div>
       <select name="buyer">
-        <option value="jeboy">Jeboy</option>
-        <option value="tim">Tim</option>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['id']; ?>">
+            <?php echo $row['buyer']; ?>
+          </option>
+        <?php } ?>
       </select>
-    </div>
+      </div>
+    <?php } ?>
 
+    <?php
+    $sql = "SELECT id, merchant FROM `merchants`";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
     <div class="row row-merchant">
       <div class="label">Merchant:</div>
       <select name="merchant">
-        <option value=1>Savemore Acacia Estates</option>
-        <option value=2>Bellyrub Acacia Estates</option>
-        <option value=3>Brewhilde Acacia Estates</option>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['id']; ?>">
+            <?php echo $row['merchant']; ?>
+          </option>
+        <?php } ?>
       </select>
     </div>
+    <?php } ?>
 
+    <?php
+    $sql = "SELECT id, mode FROM `modes`";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    ?>
     <div class="row row-mode">
       <div class="label">Mode:</div>
       <select name="mode">
-        <option value=1>Gcash</option>
-        <option value=2>Cash</option>
-        <option value=3>Card</option>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['id']; ?>">
+            <?php echo $row['mode']; ?>
+          </option>
+        <?php } ?>
       </select>
     </div>
+    <?php } ?>
 
     <div class="row-submit">
       <input type="submit" value="Submit">

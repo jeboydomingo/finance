@@ -2,12 +2,6 @@ body {
   background-color: #C2EFD6;
   background-image: url("https://i.pinimg.com/originals/64/5a/65/645a65e80ab15027480fb9db18b1ea97.jpg");
   background-size: cover;
-
-}
-
-#wrapper {
-
-
 }
 
 .add-fund {
@@ -53,10 +47,11 @@ form {
   text-align: right;
 }
 
-input {
+input, select {
   width: 70%;
   border-radius: 5px;
   border: 0 none;
+  background-color: white;
 }
 
 .row-submit input {
