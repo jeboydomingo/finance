@@ -6,17 +6,23 @@ body {
   padding: 0;
 }
 
+/* Page Wrapper */
+
 .page-wrapper {
   display: flex;
   height: 100%;
 }
 
+/* Sidebar */
+
 .sidebar {
-  width: 200px;
+  width: 179px;
   background-color: rgba(128, 0, 0, .60);
   border-right: 1px solid rgba(128, 0, 0, .60);
   box-shadow: 5px 0 15px #000;
 }
+
+/* Menu */
 
 .menu, .menu-item {
   list-style: none;
@@ -34,10 +40,11 @@ body {
 
 .menu-item a:hover {
   background-color: rgba(128, 0, 0, .80);
-
 }
 
-.add-fund {
+/* Form */
+
+.add-buyer, .add-merchant, .add-mode, .add-type {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,6 +60,9 @@ form {
   background-color: rgba(255, 208, 20, .5);
   margin-top: 60px;
   box-shadow: 0px 0px 20px #000;
+  margin-bottom: 565;
+  margin-inline: auto;
+  justify-content: center;
 }
 
 .title {
@@ -62,9 +72,9 @@ form {
   font-size: 40px;
 }
 
-.row {
+.row-add-buyer, .row-add-merchant, .row-add-mode, .row-add-type {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -74,14 +84,7 @@ form {
   background-color: rgba(255, 208, 20, .8);
 }
 
-.label {
-  width: 28%;
-  color: maroon;
-  text-shadow: 1px 1px 0px #ff0000;
-  text-align: right;
-}
-
-input, select {
+input {
   width: 70%;
   border-radius: 5px;
   border: 0 none;
