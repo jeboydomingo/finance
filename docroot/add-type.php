@@ -22,7 +22,7 @@
     </ul>
   </div>
 
-  <form action="add-type.php" method="post" name="add-type">
+  <form action="success-add-type.php" method="post" name="add-type">
 
     <h1 class="title">ADD TYPE</h1>
 
