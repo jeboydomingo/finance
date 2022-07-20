@@ -8,11 +8,11 @@
 
     <?php
       // Check if there is a submitted data.
-      if (isset($_GET["type"])) {
+      if (isset($_GET["merchant"])) {
         // Get submitted data.
-        $input = $_GET["type"];
+        $input = $_GET["merchant"];
 
-        $sql = "INSERT INTO types (type)
+        $sql = "INSERT INTO merchants (merchant)
         VALUES ('$input')";
 
         if ($conn->query($sql) === TRUE) {
@@ -25,13 +25,13 @@
 
     <div class="types-list">
       <div class="types-list-inner-wrapper">
-        <h1 class="title">TYPES</h1>
+        <h1 class="title">MERCHANTS</h1>
 
         <table class="table">
 
         <?php
           // Get data.
-          $sql = "SELECT type FROM types ORDER BY type ASC";
+          $sql = "SELECT merchant FROM merchants ORDER BY merchant ASC";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@
 
         <tr>
           <td class="number"><?php echo $i; ?></td>
-          <td class="types"><?php echo $row["type"]; ?></td>
+          <td class="merchants"><?php echo $row["merchant"]; ?></td>
         </tr>
 
         <?php

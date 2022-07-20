@@ -1,0 +1,53 @@
+.sidebar {
+  width: 200px;
+  background-color: rgba(128, 0, 0, .60);
+  border-right: 1px solid rgba(128, 0, 0, .60);
+  box-shadow: 5px 0 15px #000;
+}
+
+.menu, .menu-item, .menu-sub, .menu-item-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu, .menu-item {
+  position: relative;
+}
+
+.menu-sub {
+  display: none;
+  background-color: rgba(128, 0, 0, .60);
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: pink;
+  display: block;
+  padding: 10px 15px;
+  border-bottom: 1px dashed #eeb159;
+  cursor: pointer;
+}
+
+.menu-item a:hover {
+  background-color: rgba(128, 0, 0, .80);
+}
+
+.menu-item a.expanded {
+  background-color: rgba(128, 0, 0, .90);
+  font-weight: 600;
+}
+
+.menu-item-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>');
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: right;
+  position: relative;
+  top: 2px;
+}
+
+.menu-item-icon.expanded {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" /></svg>');
+}

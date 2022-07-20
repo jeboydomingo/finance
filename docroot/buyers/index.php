@@ -8,11 +8,11 @@
 
     <?php
       // Check if there is a submitted data.
-      if (isset($_GET["type"])) {
+      if (isset($_GET["buyer"])) {
         // Get submitted data.
-        $input = $_GET["type"];
+        $input = $_GET["buyer"];
 
-        $sql = "INSERT INTO types (type)
+        $sql = "INSERT INTO buyers (buyer)
         VALUES ('$input')";
 
         if ($conn->query($sql) === TRUE) {
@@ -23,15 +23,15 @@
       }
     ?>
 
-    <div class="types-list">
-      <div class="types-list-inner-wrapper">
-        <h1 class="title">TYPES</h1>
+    <div class="buyers-list">
+      <div class="buyers-list-inner-wrapper">
+        <h1 class="title">BUYERS</h1>
 
         <table class="table">
 
         <?php
           // Get data.
-          $sql = "SELECT type FROM types ORDER BY type ASC";
+          $sql = "SELECT buyer FROM buyers ORDER BY buyer ASC";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@
 
         <tr>
           <td class="number"><?php echo $i; ?></td>
-          <td class="types"><?php echo $row["type"]; ?></td>
+          <td class="buyers"><?php echo $row["buyer"]; ?></td>
         </tr>
 
         <?php

@@ -1,0 +1,66 @@
+body {
+  background-color: #C2EFD6;
+  background-image: url("https://i.pinimg.com/originals/64/5a/65/645a65e80ab15027480fb9db18b1ea97.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+/* list */
+
+.types-list, .buyers-list, .merchants-list, .modes-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 470px;
+}
+
+.types-list-inner-wrapper, .buyers-list-inner-wrapper, .merchants-list-inner-wrapper, .modes-list-inner-wrapper {
+  width: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 208, 20, .5);
+  margin-top: 60px;
+  box-shadow: 0px 0px 20px #000;
+  height: 205;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Rubik Moonrocks', cursive;
+  color: maroon;
+  font-size: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+tr:hover {
+  background-color: rgba(255, 208, 20, .8);
+}
+
+.number, .types, .buyers, .merchants, .modes {
+  width: 1%;
+  color: maroon;
+  text-shadow: 1px 1px 0px #ff0000;
+}
+
+.number {
+  text-align: right;
+}
+
+.types, .buyers, .merchants, .modes {
+  text-align: left;
+}

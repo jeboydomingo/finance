@@ -8,11 +8,11 @@
 
     <?php
       // Check if there is a submitted data.
-      if (isset($_GET["type"])) {
+      if (isset($_GET["mode"])) {
         // Get submitted data.
-        $input = $_GET["type"];
+        $input = $_GET["mode"];
 
-        $sql = "INSERT INTO types (type)
+        $sql = "INSERT INTO modes (mode)
         VALUES ('$input')";
 
         if ($conn->query($sql) === TRUE) {
@@ -23,15 +23,15 @@
       }
     ?>
 
-    <div class="types-list">
-      <div class="types-list-inner-wrapper">
-        <h1 class="title">TYPES</h1>
+    <div class="modes-list">
+      <div class="modes-list-inner-wrapper">
+        <h1 class="title">MODES</h1>
 
         <table class="table">
 
         <?php
           // Get data.
-          $sql = "SELECT type FROM types ORDER BY type ASC";
+          $sql = "SELECT mode FROM modes ORDER BY mode ASC";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@
 
         <tr>
           <td class="number"><?php echo $i; ?></td>
-          <td class="types"><?php echo $row["type"]; ?></td>
+          <td class="modes"><?php echo $row["mode"]; ?></td>
         </tr>
 
         <?php
