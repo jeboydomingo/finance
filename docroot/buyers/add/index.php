@@ -6,7 +6,7 @@
     <?php include '../../components/sidebar.php'; ?>
 
     <div class="add-buyer">
-      <form action="/buyers" method="GET" name="add-buyer">
+      <form class="form-add-buyer" action="/buyers" method="GET" name="add-buyer">
         <h1 class="title">ADD BUYER</h1>
 
         <div class="row row-add-buyer">

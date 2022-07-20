@@ -6,7 +6,7 @@
     <?php include '../../components/sidebar.php'; ?>
 
     <div class="add-type">
-      <form action="/types" method="GET" name="add-type">
+      <form class="form-add-type" action="/types" method="GET" name="add-type">
         <h1 class="title">ADD TYPE</h1>
 
         <div class="row row-add-type">

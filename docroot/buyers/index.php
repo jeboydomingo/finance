@@ -11,15 +11,8 @@
       if (isset($_GET["buyer"])) {
         // Get submitted data.
         $input = $_GET["buyer"];
-
-        $sql = "INSERT INTO buyers (buyer)
-        VALUES ('$input')";
-
-        if ($conn->query($sql) === TRUE) {
-          echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        $conn->query("INSERT INTO buyers (buyer)
+        VALUES ('$input')");
       }
     ?>
 

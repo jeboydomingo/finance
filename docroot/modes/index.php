@@ -11,15 +11,8 @@
       if (isset($_GET["mode"])) {
         // Get submitted data.
         $input = $_GET["mode"];
-
-        $sql = "INSERT INTO modes (mode)
-        VALUES ('$input')";
-
-        if ($conn->query($sql) === TRUE) {
-          echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        $conn->query("INSERT INTO modes (mode)
+        VALUES ('$input')");
       }
     ?>
 

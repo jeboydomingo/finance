@@ -6,7 +6,7 @@
     <?php include '../../components/sidebar.php'; ?>
 
     <div class="add-mode">
-      <form action="/modes" method="GET" name="add-mode">
+      <form class="form-add-mode" action="/modes" method="GET" name="add-mode">
         <h1 class="title">ADD MODE</h1>
 
         <div class="row row-add-mode">

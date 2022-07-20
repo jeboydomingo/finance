@@ -11,20 +11,13 @@
       if (isset($_GET["merchant"])) {
         // Get submitted data.
         $input = $_GET["merchant"];
-
-        $sql = "INSERT INTO merchants (merchant)
-        VALUES ('$input')";
-
-        if ($conn->query($sql) === TRUE) {
-          echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        $conn->query("INSERT INTO merchants (merchant)
+        VALUES ('$input')");
       }
     ?>
 
-    <div class="types-list">
-      <div class="types-list-inner-wrapper">
+    <div class="merchants-list">
+      <div class="merchants-list-inner-wrapper">
         <h1 class="title">MERCHANTS</h1>
 
         <table class="table">
